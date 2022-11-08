@@ -1,7 +1,16 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   box-sizing: border-box;
-
+  --ff-heading: "DM Serif Display";
+	--ff-text: "Karla";
+	--fs: 1rem;
+	--fw-sm: 400;
+	--fw-md: 700;
+	--DarkViolet: hsl(256, 26%, 20%);
+	--GrayishBlue: hsl(216, 30%, 68%);
+	--VeryDarkViolet: hsl(270, 9%, 17%);
+	--DarkGrayishViolet: hsl(273, 4%, 51%);
+	--VeryLightGray: hsl(0, 0%, 98%);
 }
 
 *,
@@ -14,6 +23,9 @@
 
 body {
   min-height: 100vh;
+  font-family: var(--ff-text);
+	font-size: var(--fs);
+	font-weight: var(--fw-sm);
   /* color: var(--color-text);
   background: var(--color-background);
   transition: color 0.5s, background-color 0.5s;
@@ -24,4 +36,19 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
+}
+a {
+	text-decoration: none;
+}
+button {
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+}
+img {
+	max-width: 100%;
+}
+ul {
+	list-style: none;
 }

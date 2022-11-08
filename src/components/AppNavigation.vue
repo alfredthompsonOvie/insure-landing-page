@@ -33,4 +33,66 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+.nav__bar {
+	grid-column: 2;
+	grid-row: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	height: 6em;
+}
+.nav__list {
+	position: absolute;
+	top: 6em;
+	left: 0;
+	right: 0;
+	padding-top: 1em;
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	z-index: 4;
+	@media (min-width: 768px) {
+	}
+}
+.nav__item + .nav__item {
+	margin-top: 1em;
+}
+
+.nav__link {
+	font-weight: var(--fw-md);
+	padding: 1em;
+	display: block;
+	text-align: center;
+	transition: all .3s linear;
+}
+.nav__link:hover {
+	color: var(--DarkViolet);
+}
+.nav__link.cta:hover {
+	background-color: var(--DarkViolet);
+	color: var(--VeryLightGray);
+}
+.overlay {
+	position: fixed;
+	top: 6em;
+	left: 0;
+	right: 0;
+	height: calc(100vh - 6em);
+	background-color: var(--DarkViolet);
+	background-image: url(../images/bg-pattern-mobile-nav.svg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: contain;
+	z-index: 2;
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.hamburger {
+	width: 32px;
+	height: 35px;
+	position: relative;
+}
+.btn--menu {
+	position: absolute;
+}
+</style>
