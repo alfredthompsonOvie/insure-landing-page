@@ -95,4 +95,38 @@ export default {
 .btn--menu {
 	position: absolute;
 }
+@media (min-width: 800px) {
+	.overlay {
+		display: none;
+	}
+	.nav__list {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		position: static;
+		display: flex;
+		align-items: center;
+		gap: 1em;
+		padding-top: 0em;
+	}
+	.nav__item + .nav__item {
+		margin-top: 0em;
+	}
+	.nav__link {
+		color: var(--GrayishBlue);
+		font-weight: var(--fw-md);
+		padding: 0.5em;
+		display: block;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 0.9rem;
+	}
+	.nav__link.cta {
+		border: 2px solid var(--DarkViolet);
+		color: var(--DarkViolet);
+		padding: 0.5em 1.5em;
+	}
+	.hamburger {
+		display: none;
+	}
+}
 </style>
