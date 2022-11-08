@@ -24,7 +24,7 @@
 				<section class="card__container">
 					<div class="card">
 						<img
-							src="images/icon-snappy-process.svg"
+							src="@/assets/images/icon-snappy-process.svg"
 							alt="Snappy process icon"
 						/>
 						<h2 class="heading">Snappy Process</h2>
@@ -35,7 +35,7 @@
 					</div>
 					<div class="card">
 						<img
-							src="images/icon-affordable-prices.svg"
+							src="@/assets/images/icon-affordable-prices.svg"
 							alt="Affordable Prices icon"
 						/>
 						<h2 class="heading">Affordable Prices</h2>
@@ -45,7 +45,7 @@
 						</p>
 					</div>
 					<div class="card">
-						<img src="images/icon-people-first.svg" alt="People first icon" />
+						<img src="@/assets/images/icon-people-first.svg" alt="People first icon" />
 						<h2 class="heading">People First</h2>
 						<p class="text">
 							Our plans aren’t full of conditions and clauses to prevent
@@ -63,13 +63,13 @@
 	<footer class="footer">
 		<section class="footer__social">
 			<a href="#" class="homePage">
-				<img src="images/logo.svg" alt="Insure logo" />
+				<img src="@/assets/images/logo.svg" alt="Insure logo" />
 			</a>
 			<ul class="social__list">
 				<li class="social__item">
 					<a href="#" class="social__link">
 						<img
-							src="images/icon-facebook.svg"
+							src="@/assets/images/icon-facebook.svg"
 							alt="facebook logo"
 							class="social__link--img"
 						/>
@@ -78,7 +78,7 @@
 				<li class="social__item">
 					<a href="#" class="social__link">
 						<img
-							src="images/icon-twitter.svg"
+							src="@/assets/images/icon-twitter.svg"
 							alt="twitter logo"
 							class="social__link--img"
 						/>
@@ -87,7 +87,7 @@
 				<li class="social__item">
 					<a href="#" class="social__link">
 						<img
-							src="images/icon-pinterest.svg"
+							src="@/assets/images/icon-pinterest.svg"
 							alt="pinterest logo"
 							class="social__link--img"
 						/>
@@ -96,7 +96,7 @@
 				<li class="social__item">
 					<a href="#" class="social__link">
 						<img
-							src="images/icon-instagram.svg"
+							src="@/assets/images/icon-instagram.svg"
 							alt="instagram logo"
 							class="social__link--img"
 						/>
