@@ -5,12 +5,6 @@
 	margin-inline: auto;
 }
 
-/* a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-} */
 .grid {
 	display: grid;
 	grid-template-columns: 1fr 10fr 1fr;
@@ -21,17 +15,33 @@
 	color: var(--VeryLightGray);
 	letter-spacing: 1px;
 	text-transform: uppercase;
+	z-index: 2;
 }
 .cta {
 	display: inline-block;
 	border: 1px solid;
 	padding: 0.8em 2em;
-	transition: all 0.5s linear;
+	transition: all 0.3s linear;
 	font-weight: var(--fw-md);
+	position: relative;
+	overflow: hidden;
+}
+.cta::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -101%;
+	width: 100%;
+	height: 100%;
+	transition: all .3s linear;
+	background-color: var(--VeryLightGray);
+	z-index: -1;
 }
 .cta:hover {
-	background-color: var(--VeryLightGray);
 	color: var(--DarkViolet);
+}
+.cta:hover::before {
+	left: 0%;
 }
 
 main {
@@ -49,18 +59,19 @@ main {
 	color: var(--VeryLightGray);
 	background-image: url(./images/bg-pattern-intro-left-mobile.svg),
 		url(./images/bg-pattern-intro-right-mobile.svg);
-	background-position: 0% 30em, 100% 48em;
+	background-position: 0% 26em, 100% 48em;
 	background-repeat: no-repeat;
 }
 
 .hero__illustration {
 	grid-row: 1;
 	grid-column: 1/-1;
-	padding-top: 30em;
-	background-image: url(./images/image-intro-mobile.jpg);
-	background-repeat: no-repeat;
-	background-position: bottom;
-	background-size: cover;
+	display: flex;
+	justify-content: center;
+}
+picture img {
+	object-position: center;
+	object-fit: contain;
 }
 
 .hero__content {
@@ -69,7 +80,7 @@ main {
 	padding: 5em 0;
 	text-align: center;
 }
-.block {
+.heading--hero span {
 	display: block;
 }
 
@@ -80,6 +91,7 @@ main {
 	font-weight: var(--fw-sm);
 	line-height: 1;
 	position: relative;
+	z-index: 1;
 }
 .heading--about {
 	padding: 0.6em 0 1em;
@@ -99,13 +111,13 @@ main {
 	background-color: var(--GrayishBlue);
 }
 .text--hero {
-	margin: 1em auto 1.5rem;
+	margin: 1.5em auto;
 	max-width: 550px;
 	line-height: 1.5;
 	font-size: 0.9rem;
 }
 .about {
-	padding: 3em 0 6em;
+	padding: 10em 0;
 }
 .about--inner {
 	grid-column: 2;
@@ -132,8 +144,6 @@ main {
 	margin-inline: auto;
 	color: var(--GrayishBlue);
 }
-
-
 .moreInfo {
 	background-color: var(--DarkViolet);
 	color: var(--VeryLightGray);
@@ -150,17 +160,13 @@ main {
 	background-position: top right;
 
 }
-
+.moreInfo span {
+	display: block;
+}
 .moreInfo .heading {
 	font-size: 2.5rem;
 	font-size: clamp(1.8rem, 8vw, 2.5rem);
 }
-/* @media (min-width: 637px) {
-  .moreInfo .heading span {
-    display: block;
-  }
-} */
-
 .footer {
 	background-color: var(--VeryLightGray);
 	display: grid;
@@ -169,6 +175,7 @@ main {
 	background-image: url(./images/bg-pattern-footer-mobile.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
+	padding: 3em 0 2em;
 }
 .footer__social {
 	grid-row: 1;
@@ -220,17 +227,14 @@ main {
 .attribution {
 	grid-row: 3;
 	grid-column: 2;
-	padding: 1em 0 5em;
+	align-self: center;
+	padding: 1em 0 2em;
 }
-
-
-
 @media (min-width: 500px) {
   .hero__illustration {
     background-position: center;
   }
 }
-
 @media (min-width: 639px) {
   .card__container {
     display: grid;
@@ -261,21 +265,11 @@ main {
       url(./images/bg-pattern-intro-right-mobile.svg);
     background-position: 0% 35em, 100% 48em;
   }
-  .hero__illustration {
-    padding-top: 35em;
-    background-position: center;
-    background-image: url(./images/image-intro-desktop.jpg);
-  }
-}
-@media (min-width: 800px) {
-  .hero__illustration {
-    padding-top: 38em;
-    background-position: center;
-  }
 }
 @media (min-width: 820px) {
 	.footer {
 		background-image: url("./images/bg-pattern-footer-desktop.svg");
+		padding: 2em 0;
 	}
 	.footer__social {
 		flex-direction: row;
@@ -310,9 +304,6 @@ main {
     transform: translateX(0%);
   }
 }
-
-@media (min-width: 1024px) {
-}
 @media (min-width: 1024px) {
   main {
     background-image: url('./images/bg-pattern-intro-left-desktop.svg'),
@@ -330,10 +321,10 @@ main {
     color: var(--VeryLightGray);
   }
 	.hero__illustration {
-    z-index: 1;
 		grid-row: 1;
 		grid-column: 3;
-		background-position: bottom;
+	}
+	picture {
 		position: relative;
 		top: 5em;
 	}
